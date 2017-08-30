@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+# coding: utf-8
+
+tel_number = ARGV[0]
+if tel_number.nil? || tel_number.empty?
+  puts <<-MSG
+Please provide your telephone number to earn the tickets (don't use spaces):
+$ energy_air 0791234567
+MSG
+  exit
+end
+
+require "bundler/setup"
+require "energy_air"
+
+puts "==== Energy Air Quiz bot ===="
+puts "Version: #{EnergyAir::VERSION}"
+puts "Use Ctrl-C to stop"
+puts "'.' means: Quiz played without winning a ticket."
+puts "'√' means: Quiz played and won a ticket!"
+puts "'×' means: There was an unknown error (skipped)"
+
+EnergyAir::Bot.new(tel_number)
