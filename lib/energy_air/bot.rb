@@ -21,6 +21,7 @@ module EnergyAir
 
     def run
       visit 'https://game.energy.ch'
+      override_validation_function
       enter_tel_number
       answer_question until finished?
       choose_random_bubble
@@ -36,6 +37,10 @@ module EnergyAir
     end
 
     private
+    def override_validation_function
+      page.execute_script("window.checkForm = function(){ return true; }")
+    end
+
     def enter_tel_number
       find("input#mobile").set(@tel_number)
       click_on("LOS GEHTS")
@@ -77,16 +82,16 @@ module EnergyAir
       "Von welchem ehemaligen Energy Air Act ist der Song «Bilder im Kopf»?" => 1, # ["Sido", "MoTrip", "Culcha Candela"]
       "Mit welchem Künstler stand Schlangenfrau Nina Burri auf der Bühne?" => 1, # ???["RedOne", "DJ Antoine", "OneRepublic"]
       "Wann wurde das Stade de Suisse offiziell fertig gestellt?" => 1, # ["2005", "2000", "2001"]
-      "In welcher Schweizer Stadt hat Energy KEIN Radiostudio?" => 2, # ["Bern", "Basel", "St. Gallen"]
+      "In welcher Schweizer Stadt hat Energy KEIN Radiostudio?" => 3, # ["Bern", "Basel", "St. Gallen"]
       "Welcher DJ stand noch nie auf der Energy Air Bühne?" => 2, # ["Kygo", "Felix Jaehn", "DJ Antoine"]
       "Wie viele Tage dauert das Energy Air?" => 3, # ["3", "2", "1"]
       "Wann findet das diesjährige Energy Air statt?" => 2, # ["3. September 2017", "2. September 2017", "31. August 2017"]
       "Wo findet das Energy Air statt?" => 3, # ["Zürich, Letzigrund", "Basel, St. Jakobshalle", "Bern, Stade de Suisse"]
       "Welche Plätze gibt es am Energy Air?" => 3, # ["Nur Stehplätze", "Nur Sitzplätze", "XTRA Circle-Tickets, Steh- und Sitzplätze"]
-      "Wann fand das erste Energy Air statt?" => 1, # ["Samstag, 6. September 2014", "Freitag, 5. September 2014", "Sonntag, 7. September 2014"]
+      "Wann fand das erste Energy Air statt?" => 3, # ["Samstag, 6. September 2014", "Freitag, 5. September 2014", "Sonntag, 7. September 2014"]
       "Wie hiess der Energy Air Song im Jahr 2014?" => 3, # ["Energy", "Air", "Dynamite"]
       "Wie viele Male standen Dabu Fantastic bereits auf der Energy Air Bühne?" => 1, # ["2 Mal", "Kein Mal", "1 Mal"]
-      "Zum wievielten Mal findet das Energy Air statt?" => 3, # ["Zum 3. Mal", "Zum 4. Mal", "Zum 5. Mal"],
+      "Zum wievielten Mal findet das Energy Air statt?" => 2, # ["Zum 3. Mal", "Zum 4. Mal", "Zum 5. Mal"],
       "Das Energy Air ist ...?" => 1,
       "Ab wann darf man, ohne eine erwachsene Begleitperson, am Energy Air teilnehmen?" => 1,
       "Was ist die obere Altersbeschränkung des Energy Air?" => 2,
