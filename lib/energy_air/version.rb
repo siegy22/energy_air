@@ -1,3 +1,3 @@
 module EnergyAir
-  VERSION = "2017.1"
+  VERSION = "2019.0"
 end
