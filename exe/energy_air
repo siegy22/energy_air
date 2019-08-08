@@ -5,7 +5,7 @@ tel_number = ARGV[0]
 if tel_number.nil? || tel_number.empty?
   puts <<-MSG
 Please provide your telephone number to earn the tickets (don't use spaces):
-$ energy_air 0791234567
+$ energy_air 791234567
 MSG
   exit
 end
