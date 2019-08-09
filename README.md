@@ -1,17 +1,22 @@
 # EnergyAir
 
 Tiny ruby bot to win [energy air](https://energy.ch/air) tickets.
+Tested on OS X and windows.
 
 ## Installation
 
 Install it:
-(Make sure that you have [phantomjs](http://phantomjs.org/) installed)
+(Make sure that you have google chrome installed)
 
     $ gem install energy_air
 
 ## Usage
 
-	$ energy_air <telephone_number>
+	$ energy_air <telephone_number> (e.g. 791234567)
+
+You can also add `--visual` to have chrome popup and show what's going on (useful for debugging).
+
+    $ energy_air <telephone_number> --visual
 
 ## Contributing
 
