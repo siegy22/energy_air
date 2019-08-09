@@ -1,8 +1,7 @@
-# coding: utf-8
-require "capybara"
-require "capybara/dsl"
+require 'capybara'
+require 'capybara/dsl'
 require 'webdrivers/chromedriver'
-require "selenium/webdriver"
+require 'selenium/webdriver'
 require 'energy_air/questions'
 
 Capybara.run_server = false
@@ -51,7 +50,7 @@ module EnergyAir
         print "√\a"
         sleep
       else
-        print "."
+        print '.'
       end
     rescue StandardError => e
       print "× (#{e})"
@@ -60,7 +59,7 @@ module EnergyAir
     private
 
     def answer_question
-      current_question = find(".question-text").text
+      current_question = find('.question-text').text
       answer = EnergyAir::QUESTIONS.fetch(current_question) do
         raise UnknownQuestionError, "Cannot find an answer to the question: #{current_question}"
       end
@@ -74,7 +73,7 @@ module EnergyAir
     end
 
     def choose_random_bubble
-      all(".circle").sample.click
+      all('.circle').sample.click
     end
 
     def lost?

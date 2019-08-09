@@ -1,0 +1,2 @@
+inherit_from:
+  - https://raw.githubusercontent.com/siegy22/dotfiles/de0fd27c50d34b4fce5a3947c0041a55e36e9fcb/rubocop.yml
