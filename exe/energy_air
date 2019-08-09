@@ -20,4 +20,4 @@ puts "'.' means: Quiz played without winning a ticket."
 puts "'√' means: Quiz played and won a ticket!"
 puts "'×' means: There was an unknown error (skipped)"
 
-EnergyAir::Bot.new(tel_number)
+EnergyAir::Bot.new(tel_number, visual: ARGV.include?('--visual'))
