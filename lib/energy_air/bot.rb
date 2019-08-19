@@ -77,11 +77,15 @@ module EnergyAir
     end
 
     def lost?
+      all('h1').map(&:text).include?('Leider verloren')
+    end
+
+    def lost_bubble?
       all('img[src="https://cdn.energy.ch/game-web/images/eair/bubble-lose.png"]').any?
     end
 
     def won?
-      !lost?
+      !lost_bubble?
     end
 
     def check_for_error

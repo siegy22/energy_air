@@ -12,10 +12,10 @@ module EnergyAir
     'Die wievielte Energy Air Ausgabe findet dieses Jahr statt?' => 'Die sechste',
     'Was verlangte Nena am Energy Air 2016?' => 'Eine komplett weisse Garderobe',
     'Welche DJ-Acts standen 2018 auf der Bühne des Energy Air?' => 'Averdeck',
-    'Wie schwer ist die Energy Air Bühne?' => '1000 Tonnen',
-    'Wie viele Acts waren beim letzten Energy Air dabei?' => '15',
+    'Wie schwer ist die Energy Air Bühne?' => '450 Tonnen',
+    'Wie viele Acts waren beim letzten Energy Air dabei?' => '14',
     'Wie viele Konfetti-Kanonen gibt es am Energy Air?' => '40',
-    'Welcher dieser Acts hatte einen Auftritt am Energy Air 2018?' => 'DJ Antoine',
+    'Welcher dieser Acts hatte einen Auftritt am Energy Air 2018?' => 'Alvaro Soler',
     'Wann fand das Energy Air zum ersten Mal statt?' => '2014',
     'Wann findet das Energy Air 2019 statt?' => '7. September 2019',
     # rubocop:disable Metrics/LineLength
