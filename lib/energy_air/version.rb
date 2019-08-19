@@ -1,3 +1,3 @@
 module EnergyAir
-  VERSION = '2019.1'.freeze
+  VERSION = '2019.2'.freeze
 end
